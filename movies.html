@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TV - Danh sách phim</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/movies.css">
+</head>
+
+<body>
+
+<header class="tv-header">
+
+    <div class="tv-container">
+
+        <div class="tv-header-inner">
+
+            <a href="index.html" class="tv-brand">
+                <div class="tv-logo">TV</div>
+                <span class="tv-brand-name">TV</span>
+            </a>
+
+            <nav class="tv-nav">
+
+                <a href="index.html" class="tv-nav-link">
+                    Trang chủ
+                </a>
+
+                <a href="movies.html" class="tv-nav-link active">
+                    Phim
+                </a>
+
+                <a href="categories.html" class="tv-nav-link">
+                    Thể loại
+                </a>
+
+                <a href="profile.html" class="tv-nav-link">
+                    Tài khoản
+                </a>
+
+            </nav>
+
+            <div class="tv-header-actions">
+
+                <a href="login.html"
+                   class="tv-btn tv-btn-outline">
+                    Đăng nhập
+                </a>
+
+                <a href="register.html"
+                   class="tv-btn tv-btn-red">
+                    Đăng ký
+                </a>
+
+                <div class="tv-account-menu">
+                    <span class="tv-avatar">V</span>
+                    <span>Viễn</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="tv-movies-page">
+
+        <div class="tv-container">
+
+            <div class="tv-movies-header">
+
+                <h1 class="tv-movies-title">
+                    Danh sách phim
+                </h1>
+
+                <p class="tv-movies-description">
+                    Khám phá những bộ phim mới nhất và được yêu thích
+                    trên TV.
+                </p>
+
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="tv-movies-filter">
+
+                <div class="tv-movies-search">
+
+                    <input
+                        type="text"
+                        placeholder="Tìm kiếm tên phim..."
+                    >
+
+                </div>
+
+
+                <div class="tv-movies-filter-grid">
+
+                    <select class="tv-movies-select">
+                        <option selected>Thể loại</option>
+                        <option>Hành động</option>
+                        <option>Phiêu lưu</option>
+                        <option>Hài</option>
+                        <option>Kinh dị</option>
+                        <option>Tình cảm</option>
+                        <option>Khoa học viễn tưởng</option>
+                    </select>
+
+
+                    <select class="tv-movies-select">
+                        <option selected>Năm phát hành</option>
+                        <option>2026</option>
+                        <option>2025</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                    </select>
+
+
+                    <select class="tv-movies-select">
+                        <option selected>Quốc gia</option>
+                        <option>Mỹ</option>
+                        <option>Hàn Quốc</option>
+                        <option>Nhật Bản</option>
+                        <option>Việt Nam</option>
+                        <option>Anh</option>
+                    </select>
+
+
+                    <select class="tv-movies-select">
+                        <option selected>Sắp xếp</option>
+                        <option>Mới nhất</option>
+                        <option>Đánh giá cao</option>
+                        <option>Xem nhiều nhất</option>
+                    </select>
+
+
+                    <button
+                        type="button"
+                        class="tv-btn tv-btn-red tv-movies-filter-btn">
+                        Lọc phim
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div class="tv-movies-result">
+
+                <p class="tv-movies-result-text">
+                    Hiển thị 20 phim
+                </p>
+
+                <p class="tv-movies-result-text">
+                    Tổng cộng 248 phim
+                </p>
+
+            </div>
+
+
+            <!-- MOVIES -->
+
+            <div class="tv-movies-grid">
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-badge">MỚI</span>
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            The Last Journey
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2026</span>
+                            <span class="tv-rating">★ 8.5</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Avengers: Endgame
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2019</span>
+                            <span class="tv-rating">★ 8.4</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Interstellar
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2014</span>
+                            <span class="tv-rating">★ 8.7</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Inception
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2010</span>
+                            <span class="tv-rating">★ 8.8</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            The Batman
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2022</span>
+                            <span class="tv-rating">★ 7.8</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Dune
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2021</span>
+                            <span class="tv-rating">★ 8.0</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Spider-Man
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2021</span>
+                            <span class="tv-rating">★ 8.2</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Oppenheimer
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2023</span>
+                            <span class="tv-rating">★ 8.6</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Joker
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2019</span>
+                            <span class="tv-rating">★ 8.3</span>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="tv-movie-card">
+
+                    <div class="tv-movie-poster">
+                        <span class="tv-movie-poster-label">TV</span>
+                    </div>
+
+                    <div class="tv-movie-info">
+                        <h2 class="tv-movie-title">
+                            Avatar
+                        </h2>
+
+                        <div class="tv-movie-meta">
+                            <span>2009</span>
+                            <span class="tv-rating">★ 7.9</span>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PAGINATION -->
+
+            <nav class="tv-movies-pagination">
+
+                <ul class="tv-movies-pagination-list">
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link">
+                            ‹
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link active">
+                            1
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link">
+                            2
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link">
+                            3
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link">
+                            4
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link">
+                            5
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                           class="tv-movies-pagination-link">
+                            ›
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="tv-footer">
+
+    <div class="tv-container">
+
+        <div class="tv-footer-inner">
+
+            <div>
+
+                <div class="tv-footer-brand">
+
+                    <div class="tv-logo">
+                        TV
+                    </div>
+
+                    <span class="tv-brand-name">
+                        TV
+                    </span>
+
+                </div>
+
+                <p class="tv-footer-text mt-2 mb-0">
+                    Website xem phim trực tuyến.
+                </p>
+
+            </div>
+
+            <p class="tv-footer-copy mb-0">
+                © 2026 TV. Viễn
+            </p>
+
+        </div>
+
+    </div>
+<script src="js/auth.js"></script>
+</footer>
+
+</body>
+</html>

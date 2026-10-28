@@ -1,0 +1,283 @@
+/* ==============================
+   TV - MOVIE DETAIL CSS
+   Chỉ dành cho movie-detail.html
+   ============================== */
+
+.tv-detail-page {
+    padding: 55px 0 75px;
+}
+
+/* ==============================
+   MOVIE HERO
+   ============================== */
+
+.tv-detail-hero {
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-detail-poster {
+    position: relative;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4b1b21,
+            #17191e 55%,
+            #321216
+        );
+
+    border: 1px solid var(--tv-border);
+}
+
+.tv-detail-poster-content {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(255, 255, 255, 0.14);
+
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.tv-detail-info {
+    align-self: center;
+}
+
+.tv-detail-label {
+    display: inline-block;
+
+    margin-bottom: 13px;
+    padding: 5px 9px;
+
+    border-radius: 6px;
+
+    background: rgba(230, 57, 70, 0.12);
+    color: var(--tv-red-light);
+
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.tv-detail-title {
+    margin-bottom: 14px;
+
+    color: var(--tv-white);
+
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.tv-detail-original-title {
+    margin-bottom: 20px;
+
+    color: var(--tv-muted);
+
+    font-size: 14px;
+}
+
+.tv-detail-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.tv-detail-meta-item {
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: var(--tv-card);
+
+    color: var(--tv-text);
+
+    font-size: 12px;
+}
+
+.tv-detail-rating {
+    color: #f2c94c;
+    font-weight: 800;
+}
+
+.tv-detail-description {
+    max-width: 760px;
+
+    margin-bottom: 25px;
+
+    color: var(--tv-muted);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.tv-detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ==============================
+   INFORMATION
+   ============================== */
+
+.tv-detail-information {
+    padding: 40px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.tv-detail-info-box {
+    padding: 25px;
+
+    border: 1px solid var(--tv-border);
+    border-radius: var(--tv-radius);
+
+    background: var(--tv-card);
+}
+
+.tv-detail-info-title {
+    margin-bottom: 20px;
+
+    color: var(--tv-white);
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.tv-detail-info-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tv-detail-info-list li {
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-bottom: 1px solid var(--tv-border);
+
+    font-size: 13px;
+}
+
+.tv-detail-info-list li:last-child {
+    border-bottom: 0;
+}
+
+.tv-detail-info-label {
+    color: var(--tv-muted);
+}
+
+.tv-detail-info-value {
+    color: var(--tv-text);
+    text-align: right;
+}
+
+/* ==============================
+   RELATED
+   ============================== */
+
+.tv-detail-related {
+    padding-top: 20px;
+}
+
+.tv-detail-related-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 991.98px) {
+
+    .tv-detail-hero {
+        grid-template-columns: 230px 1fr;
+        gap: 28px;
+    }
+
+    .tv-detail-information {
+        grid-template-columns: 1fr;
+    }
+
+    .tv-detail-related-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .tv-detail-page {
+        padding: 40px 0 55px;
+    }
+
+    .tv-detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .tv-detail-poster {
+        width: min(250px, 100%);
+        margin: 0 auto;
+    }
+
+    .tv-detail-info {
+        text-align: left;
+    }
+
+    .tv-detail-related-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .tv-detail-title {
+        font-size: 32px;
+    }
+
+    .tv-detail-information {
+        padding: 30px 0;
+    }
+
+    .tv-detail-info-box {
+        padding: 20px;
+    }
+
+    .tv-detail-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}

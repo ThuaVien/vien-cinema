@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng nhập | TV</title>
+    <!-- Bootstrap 5.3.8 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- CSS dùng chung -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- CSS riêng trang đăng nhập -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="tv-header">
+        <div class="tv-container">
+            <div class="tv-header-inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="tv-brand">
+                    <span class="tv-logo">TV</span>
+                    <span class="tv-brand-name">TV</span>
+                </a>
+
+                <!-- Menu điều hướng -->
+                <nav class="tv-nav" aria-label="Điều hướng chính">
+                    <a href="index.html" class="tv-nav-link">
+                        Trang chủ
+                    </a>
+
+                    <a href="movies.html" class="tv-nav-link">
+                        Phim
+                    </a>
+
+                    <a href="categories.html" class="tv-nav-link">
+                        Thể loại
+                    </a>
+
+                    <a href="profile.html" class="tv-nav-link">
+                        Tài khoản
+                    </a>
+                </nav>
+
+                <!-- Khu vực tài khoản -->
+                <div class="tv-header-actions">
+
+                    <!-- Hiển thị khi chưa đăng nhập -->
+                    <div class="tv-auth-buttons">
+                        <a
+                            href="login.html"
+                            class="tv-btn tv-btn-outline"
+                            aria-current="page"
+                        >
+                            Đăng nhập
+                        </a>
+
+                        <a
+                            href="register.html"
+                            class="tv-btn tv-btn-red"
+                        >
+                            Đăng ký
+                        </a>
+                    </div>
+
+                    <!-- Hiển thị khi đã đăng nhập -->
+                    <div class="tv-account-menu">
+                        <span class="tv-avatar" data-tv-user-initial>V</span>
+
+                        <span class="tv-account-name" data-tv-user-name>
+                            Người dùng
+                        </span>
+
+                        <a href="profile.html" class="tv-btn tv-btn-outline">
+                            Tài khoản
+                        </a>
+
+                        <a
+                            href="index.html"
+                            class="tv-btn tv-btn-outline"
+                            data-tv-logout
+                        >
+                            Đăng xuất
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="tv-login-page">
+        <div class="tv-login-wrapper">
+
+            <section class="tv-login-card">
+
+                <!-- Tiêu đề -->
+                <div class="tv-login-header">
+                    <h1 class="tv-login-title">
+                        Chào mừng trở lại!
+                    </h1>
+
+                    <p class="tv-login-subtitle">
+                        Đăng nhập để tiếp tục khám phá thế giới phim trên TV
+                    </p>
+                </div>
+
+                <!-- Form đăng nhập -->
+                <form id="loginForm" novalidate>
+
+                    <!-- Email -->
+                    <div class="tv-login-field">
+                        <label for="login-email" class="tv-login-label">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            class="tv-login-input"
+                            placeholder="example@gmail.com"
+                            autocomplete="email"
+                        >
+
+                        <div
+                            id="login-email-error"
+                            class="tv-login-error"
+                        ></div>
+                    </div>
+
+                    <!-- Mật khẩu -->
+                    <div class="tv-login-field">
+                        <label for="login-password" class="tv-login-label">
+                            Mật khẩu
+                        </label>
+
+                        <div class="tv-login-password-wrapper">
+                            <input
+                                type="password"
+                                id="login-password"
+                                class="tv-login-input"
+                                placeholder="Nhập mật khẩu"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="tv-login-password-toggle"
+                                aria-label="Hiện mật khẩu"
+                            >
+                                Hiện
+                            </button>
+                        </div>
+
+                        <div
+                            id="login-password-error"
+                            class="tv-login-error"
+                        ></div>
+                    </div>
+
+                    <!-- Thông báo đăng nhập -->
+                    <div
+                        id="login-success"
+                        class="tv-login-success"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                    <!-- Nút đăng nhập -->
+                    <button type="submit" class="tv-login-submit">
+                        Đăng nhập
+                    </button>
+
+                </form>
+
+                <!-- Liên kết đăng ký -->
+                <div class="tv-login-register">
+                    <span>Chưa có tài khoản?</span>
+                    <a href="register.html">Đăng ký ngay</a>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="tv-footer">
+        <div class="tv-container">
+            <div class="tv-footer-inner">
+
+                <a href="index.html" class="tv-footer-brand">
+                    <span class="tv-logo">TV</span>
+                    <span>TV</span>
+                </a>
+
+                <span class="tv-footer-copy">
+                    © 2026 TV. Viễn
+                </span>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript xác thực dùng chung -->
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,357 @@
+
+/* =========================================
+   TV - LOGIN CSS
+   Chỉ áp dụng cho login.html
+   Không chỉnh sửa Header, Footer dùng chung
+   ========================================= */
+
+/* Khu vực chính */
+
+.tv-login-page {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 0;
+    padding: 36px 16px 44px;
+
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(230, 57, 70, 0.08),
+        transparent 45%
+    );
+}
+
+.tv-login-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Thẻ đăng nhập */
+
+.tv-login-card {
+    width: 100%;
+    padding: 32px;
+
+    border: 1px solid var(--tv-border);
+    border-radius: var(--tv-radius);
+
+    background: var(--tv-card);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+/* Tiêu đề */
+
+.tv-login-header {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.tv-login-title {
+    margin: 0 0 10px;
+
+    color: var(--tv-white);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.tv-login-subtitle {
+    max-width: 320px;
+    margin: 0 auto;
+
+    color: var(--tv-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Các trường nhập */
+
+.tv-login-field {
+    margin-bottom: 18px;
+}
+
+.tv-login-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--tv-text);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.tv-login-input {
+    display: block;
+    width: 100%;
+    height: 46px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--tv-border);
+    border-radius: 8px;
+    outline: none;
+
+    background: var(--tv-black-soft);
+    color: var(--tv-white);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tv-login-input::placeholder {
+    color: #737985;
+    opacity: 1;
+}
+
+.tv-login-input:focus {
+    border-color: var(--tv-red);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+}
+
+.tv-login-input.input-error {
+    border-color: var(--tv-red);
+}
+
+.tv-login-input.input-success {
+    border-color: #4caf70;
+}
+
+/* Hiện / ẩn mật khẩu */
+
+.tv-login-password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tv-login-password-wrapper .tv-login-input {
+    padding-right: 65px;
+}
+
+.tv-login-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    transform: translateY(-50%);
+
+    padding: 6px;
+    border: 0;
+    border-radius: 5px;
+
+    background: transparent;
+    color: var(--tv-muted);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.tv-login-password-toggle:hover {
+    color: var(--tv-white);
+}
+
+.tv-login-password-toggle:focus-visible {
+    outline: 2px solid var(--tv-red-light);
+    outline-offset: 2px;
+}
+
+/* Thông báo lỗi */
+
+.tv-login-error {
+    min-height: 0;
+    margin-top: 5px;
+
+    color: var(--tv-red-light);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Thông báo đăng nhập */
+
+.tv-login-success {
+    min-height: 0;
+    margin: 2px 0 10px;
+
+    color: #63d471;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Nút đăng nhập */
+
+.tv-login-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 46px;
+    margin-top: 5px;
+    padding: 11px 16px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--tv-red);
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.tv-login-submit:hover {
+    background: var(--tv-red-dark);
+}
+
+.tv-login-submit:active {
+    transform: scale(0.99);
+}
+
+.tv-login-submit:focus-visible {
+    outline: 2px solid var(--tv-red-light);
+    outline-offset: 3px;
+}
+
+/* Liên kết đăng ký */
+
+.tv-login-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-top: 22px;
+
+    color: var(--tv-muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.tv-login-register a {
+    color: var(--tv-red-light);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.tv-login-register a:hover {
+    color: var(--tv-white);
+    text-decoration: underline;
+}
+
+/* Máy tính bảng và điện thoại */
+
+@media (max-width: 575.98px) {
+    .tv-login-page {
+        padding: 26px 15px 32px;
+    }
+
+    .tv-login-wrapper {
+        max-width: 420px;
+    }
+
+    .tv-login-card {
+        padding: 26px 21px;
+        border-radius: 13px;
+    }
+
+    .tv-login-header {
+        margin-bottom: 22px;
+    }
+
+    .tv-login-title {
+        font-size: 23px;
+    }
+
+    .tv-login-subtitle {
+        font-size: 12px;
+    }
+
+    .tv-login-field {
+        margin-bottom: 16px;
+    }
+
+    .tv-login-register {
+        margin-top: 19px;
+    }
+}
+
+/* Điện thoại màn hình nhỏ */
+
+@media (max-width: 360px) {
+    .tv-login-page {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .tv-login-card {
+        padding: 23px 16px;
+    }
+
+    .tv-login-title {
+        font-size: 21px;
+    }
+
+    .tv-login-input {
+        font-size: 12px;
+    }
+}
+
+/* Màn hình thấp */
+
+@media (max-height: 650px) and (min-width: 576px) {
+    .tv-login-page {
+        align-items: flex-start;
+        padding-top: 22px;
+        padding-bottom: 26px;
+    }
+
+    .tv-login-card {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .tv-login-header {
+        margin-bottom: 19px;
+    }
+}
+
+
+/* Thông báo xác thực từ auth.js */
+.tv-login-success.is-error {
+    color: var(--tv-red-light);
+}
+
+.tv-login-success.is-success {
+    color: #63d471;
+}
+
+.tv-login-success:not(:empty) {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}

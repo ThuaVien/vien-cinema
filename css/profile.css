@@ -1,0 +1,465 @@
+
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.tv-profile-page {
+    padding: 40px 0 80px;
+    min-height: 70vh;
+}
+
+.tv-profile-page,
+.tv-profile-page * {
+    box-sizing: border-box;
+}
+
+.tv-profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #e63946, #a91e2b);
+    color: #fff;
+}
+
+.tv-profile-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+}
+
+.tv-profile-avatar {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.tv-profile-user-info {
+    min-width: 0;
+}
+
+.tv-profile-name {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.tv-profile-email {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.85);
+    overflow-wrap: anywhere;
+}
+
+.tv-profile-member {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+}
+
+.tv-profile-logout {
+    flex-shrink: 0;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.tv-profile-logout:hover {
+    color: #e63946;
+    background: #fff;
+}
+
+/* Các khối nội dung */
+
+.tv-profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.tv-profile-section {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid var(--tv-border, rgba(255,255,255,0.08));
+    border-radius: 18px;
+    background: var(--tv-card, #1b1f25);
+}
+
+.tv-profile-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.tv-profile-heading {
+    min-width: 0;
+}
+
+.tv-profile-section-title {
+    margin: 0 0 8px;
+    color: var(--tv-white, #f5f5f5);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.tv-profile-section-description {
+    margin: 0;
+    color: var(--tv-muted, #969ba5);
+    font-size: 0.95rem;
+}
+
+/* Nút và liên kết */
+
+.tv-profile-view-all {
+    flex-shrink: 0;
+    color: var(--tv-red-light, #ff6876);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tv-profile-view-all:hover {
+    color: var(--tv-white, #f5f5f5);
+}
+
+.tv-profile-edit {
+    flex-shrink: 0;
+}
+
+.tv-profile-form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.tv-profile-form-actions[hidden] {
+    display: none !important;
+}
+
+.tv-profile-message {
+    margin: 12px 0 0;
+    color: var(--tv-muted, #969ba5);
+    font-size: 0.9rem;
+}
+
+.tv-profile-message:empty {
+    display: none;
+}
+
+/* Thông tin cá nhân */
+
+.tv-profile-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tv-profile-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--tv-border, rgba(255,255,255,0.08));
+    border-radius: 12px;
+    background: var(--tv-black-soft, #14171c);
+}
+
+.tv-profile-info-label {
+    color: var(--tv-muted, #969ba5);
+    font-size: 0.9rem;
+}
+
+.tv-profile-info-value {
+    min-width: 0;
+    color: var(--tv-white, #f5f5f5);
+    font-size: 1rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.tv-profile-input {
+    width: 100%;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+}
+
+.tv-profile-input:not(:disabled) {
+    padding: 9px 10px;
+    border-color: var(--tv-border, rgba(255,255,255,0.08));
+    border-radius: 8px;
+    background: var(--tv-card, #1b1f25);
+}
+
+.tv-profile-input:focus-visible {
+    border-color: var(--tv-red, #e63946);
+}
+
+.tv-profile-status {
+    color: #58d68d;
+    font-weight: 600;
+}
+
+/* Lịch sử xem */
+
+.tv-profile-movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tv-profile-movie-card {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--tv-border, rgba(255,255,255,0.08));
+    border-radius: 12px;
+    background: var(--tv-black-soft, #14171c);
+    color: var(--tv-white, #f5f5f5);
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tv-profile-movie-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--tv-red, #e63946);
+    color: var(--tv-white, #f5f5f5);
+}
+
+.tv-profile-movie-poster {
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+}
+
+.tv-profile-movie-poster small {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.tv-poster-avengers {
+    background: linear-gradient(145deg, #68242d, #171a22 75%);
+}
+
+.tv-poster-interstellar {
+    background: linear-gradient(145deg, #17415a, #14171c 75%);
+}
+
+.tv-poster-dune {
+    background: linear-gradient(145deg, #9b6938, #28201a 75%);
+}
+
+.tv-poster-batman {
+    background: linear-gradient(145deg, #38404c, #101114 75%);
+}
+
+.tv-profile-movie-info {
+    padding: 15px;
+}
+
+.tv-profile-movie-info h3 {
+    margin: 0 0 8px;
+    color: var(--tv-white, #f5f5f5);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.tv-profile-movie-info p {
+    margin: 0 0 10px;
+    color: var(--tv-muted, #969ba5);
+    font-size: 0.85rem;
+}
+
+.tv-progress {
+    height: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.tv-progress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--tv-red, #e63946);
+}
+
+/* Phim yêu thích */
+
+.tv-profile-favorites {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tv-profile-favorite-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid var(--tv-border, rgba(255,255,255,0.08));
+    border-radius: 12px;
+    background: var(--tv-black-soft, #14171c);
+}
+
+.tv-profile-favorite-poster {
+    width: 76px;
+    height: 94px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.tv-profile-favorite-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.tv-profile-favorite-info h3 {
+    margin: 0 0 7px;
+    color: var(--tv-white, #f5f5f5);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.tv-profile-favorite-info p {
+    margin: 0;
+    color: var(--tv-muted, #969ba5);
+    font-size: 0.9rem;
+}
+
+.tv-profile-favorite-button {
+    flex-shrink: 0;
+    padding: 9px 14px;
+    border: 1px solid var(--tv-red, #e63946);
+    border-radius: 8px;
+    color: var(--tv-white, #f5f5f5);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.tv-profile-favorite-button:hover {
+    background: var(--tv-red, #e63946);
+    color: #fff;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    .tv-profile-movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tv-profile-page {
+        padding: 28px 0 55px;
+    }
+
+    .tv-profile-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    .tv-profile-section {
+        padding: 22px;
+    }
+
+    .tv-profile-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tv-profile-section-header {
+        align-items: flex-start;
+    }
+
+    .tv-profile-favorite-item {
+        flex-wrap: wrap;
+    }
+
+    .tv-profile-favorite-button {
+        margin-left: 94px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tv-profile-user {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .tv-profile-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 1.5rem;
+    }
+
+    .tv-profile-section {
+        padding: 16px;
+    }
+
+    .tv-profile-section-header {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .tv-profile-movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tv-profile-movie-poster {
+        min-height: 220px;
+    }
+
+    .tv-profile-favorite-poster {
+        width: 64px;
+        height: 82px;
+    }
+
+    .tv-profile-favorite-button {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tài khoản | TV</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS dùng chung -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- CSS riêng trang profile -->
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="tv-header">
+        <div class="tv-container">
+            <div class="tv-header-inner">
+                <a href="index.html" class="tv-brand">
+                    <span class="tv-logo">TV</span>
+                    <span class="tv-brand-name">TV</span>
+                </a>
+
+                <nav class="tv-nav" aria-label="Điều hướng chính">
+                    <a href="index.html" class="tv-nav-link">Trang chủ</a>
+                    <a href="movies.html" class="tv-nav-link">Phim</a>
+                    <a href="categories.html" class="tv-nav-link">Thể loại</a>
+                    <a href="profile.html"
+                       class="tv-nav-link"
+                       aria-current="page">
+                        Tài khoản
+                    </a>
+                </nav>
+
+                <div class="tv-header-actions">
+                    <div class="tv-auth-buttons">
+                        <a href="login.html" class="tv-btn tv-btn-outline">
+                            Đăng nhập
+                        </a>
+                        <a href="register.html" class="tv-btn tv-btn-red">
+                            Đăng ký
+                        </a>
+                    </div>
+
+                    <div class="tv-account-menu">
+                        <span class="tv-avatar" data-tv-user-initial>V</span>
+                        <span class="tv-account-name" data-tv-user-name>
+                            Người dùng
+                        </span>
+                        <a href="profile.html" class="tv-btn tv-btn-outline">
+                            Tài khoản
+                        </a>
+                        <a href="index.html"
+                           class="tv-btn tv-btn-outline"
+                           data-tv-logout>
+                            Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="tv-profile-page">
+        <div class="tv-container">
+
+            <!-- Thông tin tổng quan -->
+            <section class="tv-profile-header">
+                <div class="tv-profile-user">
+                    <div class="tv-profile-avatar" data-tv-user-initial>V</div>
+
+                    <div class="tv-profile-user-info">
+                        <h1 class="tv-profile-name" data-tv-user-name>
+                            Viễn
+                        </h1>
+
+                        <p class="tv-profile-email" data-tv-user-email>
+                            vien@example.com
+                        </p>
+
+                        <span class="tv-profile-member">
+                            Thành viên TV
+                        </span>
+                    </div>
+                </div>
+
+                <a href="index.html"
+                   class="tv-btn tv-btn-outline tv-profile-logout"
+                   data-tv-logout>
+                    Đăng xuất
+                </a>
+            </section>
+
+            <!-- Nội dung tài khoản -->
+            <section class="tv-profile-content">
+
+                <!-- Thông tin cá nhân -->
+                <section class="tv-profile-section">
+                    <div class="tv-profile-section-header">
+                        <div class="tv-profile-heading">
+                            <h2 class="tv-profile-section-title">
+                                Thông tin cá nhân
+                            </h2>
+                            <p class="tv-profile-section-description">
+                                Thông tin cơ bản của tài khoản.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="tv-btn tv-btn-outline tv-profile-edit"
+                            id="profile-edit-btn">
+                            Chỉnh sửa
+                        </button>
+                    </div>
+
+                    <form id="profile-form">
+                        <div class="tv-profile-info-grid">
+                            <div class="tv-profile-info-item">
+                                <label for="profile-name"
+                                       class="tv-profile-info-label">
+                                    Họ và tên
+                                </label>
+                                <input
+                                    id="profile-name"
+                                    class="tv-profile-info-value tv-profile-input"
+                                    type="text"
+                                    value="Viễn"
+                                    data-profile-field="name"
+                                    disabled
+                                >
+                            </div>
+
+                            <div class="tv-profile-info-item">
+                                <label for="profile-email"
+                                       class="tv-profile-info-label">
+                                    Email
+                                </label>
+                                <input
+                                    id="profile-email"
+                                    class="tv-profile-info-value tv-profile-input"
+                                    type="email"
+                                    value="vien@example.com"
+                                    data-profile-field="email"
+                                    disabled
+                                >
+                            </div>
+
+                            <div class="tv-profile-info-item">
+                                <span class="tv-profile-info-label">
+                                    Ngày tham gia
+                                </span>
+                                <span class="tv-profile-info-value">
+                                    01/01/2026
+                                </span>
+                            </div>
+
+                            <div class="tv-profile-info-item">
+                                <span class="tv-profile-info-label">
+                                    Trạng thái
+                                </span>
+                                <span class="tv-profile-status">
+                                    Đang hoạt động
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="tv-profile-form-actions" id="profile-form-actions" hidden>
+                            <button type="submit" class="tv-btn tv-btn-red">
+                                Lưu thay đổi
+                            </button>
+                            <button type="button"
+                                    class="tv-btn tv-btn-outline"
+                                    id="profile-cancel-btn">
+                                Hủy
+                            </button>
+                        </div>
+
+                        <p id="profile-message"
+                           class="tv-profile-message"
+                           aria-live="polite"></p>
+                    </form>
+                </section>
+
+                <!-- Lịch sử xem -->
+                <section class="tv-profile-section">
+                    <div class="tv-profile-section-header">
+                        <div class="tv-profile-heading">
+                            <h2 class="tv-profile-section-title">
+                                Lịch sử xem
+                            </h2>
+                            <p class="tv-profile-section-description">
+                                Những bộ phim bạn đã xem gần đây.
+                            </p>
+                        </div>
+
+                        <a href="movies.html" class="tv-profile-view-all">
+                            Xem tất cả
+                        </a>
+                    </div>
+
+                    <div class="tv-profile-movie-grid" id="tv-watch-history">
+                        
+                    </div>
+                </section>
+
+                <!-- Phim yêu thích -->
+                <section class="tv-profile-section">
+                    <div class="tv-profile-section-header">
+                        <div class="tv-profile-heading">
+                            <h2 class="tv-profile-section-title">
+                                Phim yêu thích
+                            </h2>
+                            <p class="tv-profile-section-description">
+                                Danh sách phim bạn đã lưu.
+                            </p>
+                        </div>
+
+                        <a href="movies.html" class="tv-profile-view-all">
+                            Xem tất cả
+                        </a>
+                    </div>
+
+                    <div class="tv-profile-favorites">
+                        <article class="tv-profile-favorite-item">
+                            <div class="tv-profile-favorite-poster tv-poster-dune">
+                                DUNE
+                            </div>
+                            <div class="tv-profile-favorite-info">
+                                <h3>Dune: Part Two</h3>
+                                <p>2024 · Khoa học viễn tưởng</p>
+                            </div>
+                            <a href="movie-detail.html"
+                               class="tv-profile-favorite-button">
+                                Xem phim
+                            </a>
+                        </article>
+
+                        <article class="tv-profile-favorite-item">
+                            <div class="tv-profile-favorite-poster tv-poster-batman">
+                                BATMAN
+                            </div>
+                            <div class="tv-profile-favorite-info">
+                                <h3>The Batman</h3>
+                                <p>2022 · Hành động</p>
+                            </div>
+                            <a href="movie-detail.html"
+                               class="tv-profile-favorite-button">
+                                Xem phim
+                            </a>
+                        </article>
+
+                        <article class="tv-profile-favorite-item">
+                            <div class="tv-profile-favorite-poster tv-poster-avengers">
+                                AVENGERS
+                            </div>
+                            <div class="tv-profile-favorite-info">
+                                <h3>Avengers: Endgame</h3>
+                                <p>2019 · Hành động</p>
+                            </div>
+                            <a href="movie-detail.html"
+                               class="tv-profile-favorite-button">
+                                Xem phim
+                            </a>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="tv-footer">
+        <div class="tv-container">
+            <div class="tv-footer-inner">
+                <a href="index.html" class="tv-footer-brand">
+                    <span class="tv-logo">TV</span>
+                    <span>TV</span>
+                </a>
+
+                <p class="tv-footer-text">
+                    Website xem phim trực tuyến.
+                </p>
+
+                <span class="tv-footer-copy">
+                    © 2026 TV. Viễn
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript dùng chung -->
+    <script src="js/auth.js"></script>
+
+    <!-- JavaScript riêng trang profile -->
+    <script src="js/profile.js"></script>
+
+<div class="tv-profile-movie-grid">
+    <!-- Danh sách phim được tạo tự động bởi profile.js -->
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

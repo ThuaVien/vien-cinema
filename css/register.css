@@ -1,0 +1,368 @@
+
+
+/* =========================================
+   TV - REGISTER CSS
+   Chỉ dành cho register.html
+   Không sửa giao diện các trang khác
+   ========================================= */
+
+/* Khung nội dung */
+
+.tv-register-page {
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 38px 20px 44px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(230, 57, 70, 0.075),
+            transparent 55%
+        );
+}
+
+.tv-register-wrapper {
+    width: 100%;
+    max-width: 440px;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+/* Thẻ đăng ký */
+
+.tv-register-card {
+    width: 100%;
+    padding: 30px 32px;
+
+    border: 1px solid var(--tv-border);
+    border-radius: var(--tv-radius);
+
+    background: var(--tv-card);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
+}
+
+/* Tiêu đề */
+
+.tv-register-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.tv-register-title {
+    margin: 0 0 8px;
+
+    color: var(--tv-white);
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.tv-register-subtitle {
+    margin: 0;
+
+    color: var(--tv-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Các trường nhập */
+
+.tv-register-field {
+    min-width: 0;
+    margin-bottom: 16px;
+}
+
+.tv-register-label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: var(--tv-text);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.tv-register-input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    min-width: 0;
+    padding: 0 14px;
+
+    border: 1px solid var(--tv-border);
+    border-radius: 10px;
+    outline: none;
+
+    background: var(--tv-black-soft);
+    color: var(--tv-white);
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: normal;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tv-register-input::placeholder {
+    color: #737985;
+    opacity: 1;
+}
+
+.tv-register-input:focus {
+    border-color: var(--tv-red);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+}
+
+.tv-register-input.input-error {
+    border-color: var(--tv-red);
+}
+
+.tv-register-input.input-success {
+    border-color: #4caf70;
+}
+
+/* Hiện / ẩn mật khẩu */
+
+.tv-register-password-wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.tv-register-password-wrapper .tv-register-input {
+    padding-right: 62px;
+}
+
+.tv-register-password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    transform: translateY(-50%);
+
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+
+    background: transparent;
+    color: var(--tv-muted);
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.tv-register-password-toggle:hover {
+    color: var(--tv-white);
+}
+
+.tv-register-password-toggle:focus-visible {
+    outline: 2px solid var(--tv-red);
+    outline-offset: 2px;
+}
+
+/* Thông báo kiểm tra dữ liệu */
+
+.tv-register-error {
+    min-height: 0;
+    margin-top: 4px;
+
+    color: var(--tv-red-light);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.tv-register-error:not(:empty) {
+    min-height: 16px;
+}
+
+.tv-register-success {
+    min-height: 0;
+    margin: 2px 0 10px;
+
+    color: #63d471;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Nút đăng ký */
+
+.tv-register-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 48px;
+    margin-top: 5px;
+    padding: 10px 16px;
+
+    border: 1px solid var(--tv-red);
+    border-radius: 10px;
+
+    background: var(--tv-red);
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.tv-register-submit:hover {
+    border-color: var(--tv-red-dark);
+    background: var(--tv-red-dark);
+}
+
+.tv-register-submit:active {
+    transform: scale(0.99);
+}
+
+.tv-register-submit:focus-visible {
+    outline: 2px solid var(--tv-red-light);
+    outline-offset: 3px;
+}
+
+/* Liên kết đăng nhập */
+
+.tv-register-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-top: 19px;
+
+    color: var(--tv-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.tv-register-login a {
+    color: var(--tv-red-light);
+    font-weight: 700;
+}
+
+.tv-register-login a:hover {
+    color: var(--tv-white);
+    text-decoration: underline;
+}
+
+/* Màn hình laptop có chiều cao thấp */
+
+@media (max-height: 760px) and (min-width: 801px) {
+    .tv-register-page {
+        align-items: flex-start;
+        padding-top: 24px;
+        padding-bottom: 28px;
+    }
+
+    .tv-register-card {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .tv-register-header {
+        margin-bottom: 18px;
+    }
+
+    .tv-register-field {
+        margin-bottom: 12px;
+    }
+
+    .tv-register-input {
+        height: 43px;
+    }
+
+    .tv-register-submit {
+        min-height: 44px;
+    }
+}
+
+/* Tablet và điện thoại */
+
+@media (max-width: 800px) {
+    .tv-register-page {
+        padding: 30px 18px 36px;
+    }
+
+    .tv-register-wrapper {
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tv-register-page {
+        padding: 24px 14px 30px;
+    }
+
+    .tv-register-card {
+        padding: 24px 20px;
+        border-radius: 14px;
+    }
+
+    .tv-register-title {
+        font-size: 24px;
+    }
+
+    .tv-register-subtitle {
+        font-size: 12px;
+    }
+
+    .tv-register-field {
+        margin-bottom: 14px;
+    }
+
+    .tv-register-input {
+        height: 44px;
+        font-size: 14px;
+    }
+
+    .tv-register-submit {
+        min-height: 45px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tv-register-page {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .tv-register-card {
+        padding: 22px 16px;
+    }
+}
+
+
+/* Thông báo xác thực từ auth.js */
+.tv-register-success.is-error {
+    color: var(--tv-red-light);
+}
+
+.tv-register-success.is-success {
+    color: #63d471;
+}
+
+.tv-register-success:not(:empty) {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}

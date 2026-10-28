@@ -1,0 +1,370 @@
+/* ==============================
+   TV - WATCH CSS
+   Chỉ dành cho watch.html
+   ============================== */
+
+.tv-watch-page {
+    padding: 35px 0 70px;
+}
+
+/* ==============================
+   VIDEO PLAYER
+   ============================== */
+
+.tv-watch-player {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #292d34 0%,
+            #17191e 45%,
+            #090a0c 100%
+        );
+
+    border: 1px solid var(--tv-border);
+}
+
+.tv-watch-player-content {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tv-watch-play {
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, 0.95);
+    color: white;
+
+    font-size: 25px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.tv-watch-player-label {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+
+    padding: 6px 10px;
+
+    border-radius: 7px;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: var(--tv-text);
+
+    font-size: 12px;
+}
+
+/* ==============================
+   PLAYER CONTROLS
+   ============================== */
+
+.tv-watch-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 25px 22px 18px;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.tv-watch-progress {
+    width: 100%;
+    height: 4px;
+
+    margin-bottom: 14px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.tv-watch-progress-value {
+    width: 35%;
+    height: 100%;
+
+    background: var(--tv-red);
+}
+
+.tv-watch-controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tv-watch-controls-left,
+.tv-watch-controls-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tv-watch-control {
+    color: white;
+    font-size: 14px;
+}
+
+/* ==============================
+   MOVIE INFORMATION
+   ============================== */
+
+.tv-watch-info {
+    padding: 30px 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-watch-title {
+    margin-bottom: 8px;
+
+    color: var(--tv-white);
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.tv-watch-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    color: var(--tv-muted);
+
+    font-size: 13px;
+}
+
+.tv-watch-rating {
+    color: #f2c94c;
+    font-weight: 800;
+}
+
+.tv-watch-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ==============================
+   EPISODES
+   ============================== */
+
+.tv-watch-episodes {
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-watch-episodes-header {
+    margin-bottom: 20px;
+}
+
+.tv-watch-episodes-title {
+    margin-bottom: 5px;
+
+    color: var(--tv-white);
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.tv-watch-episodes-description {
+    margin: 0;
+
+    color: var(--tv-muted);
+
+    font-size: 13px;
+}
+
+.tv-watch-episodes-list {
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+
+    gap: 10px;
+}
+
+.tv-watch-episode {
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--tv-border);
+    border-radius: 8px;
+
+    background: var(--tv-card);
+
+    color: var(--tv-muted);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.tv-watch-episode:hover {
+    border-color: rgba(230, 57, 70, 0.4);
+    color: var(--tv-white);
+}
+
+.tv-watch-episode.active {
+    border-color: var(--tv-red);
+    background: var(--tv-red);
+    color: white;
+}
+
+/* ==============================
+   DESCRIPTION
+   ============================== */
+
+.tv-watch-description {
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--tv-border);
+}
+
+.tv-watch-description-title {
+    margin-bottom: 12px;
+
+    color: var(--tv-white);
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.tv-watch-description-text {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: var(--tv-muted);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ==============================
+   RECOMMENDED MOVIES
+   ============================== */
+
+.tv-watch-related {
+    padding-top: 35px;
+}
+
+.tv-watch-related-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 991.98px) {
+
+    .tv-watch-episodes-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .tv-watch-related-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .tv-watch-page {
+        padding-top: 20px;
+    }
+
+    .tv-watch-info {
+        flex-direction: column;
+    }
+
+    .tv-watch-actions {
+        width: 100%;
+    }
+
+    .tv-watch-episodes-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tv-watch-related-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .tv-watch-player {
+        border-radius: 10px;
+    }
+
+    .tv-watch-play {
+        width: 58px;
+        height: 58px;
+
+        font-size: 19px;
+    }
+
+    .tv-watch-controls {
+        padding: 20px 12px 12px;
+    }
+
+    .tv-watch-title {
+        font-size: 22px;
+    }
+
+    .tv-watch-episodes-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tv-watch-related-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}

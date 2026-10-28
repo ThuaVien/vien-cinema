@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV - Xem phim trực tuyến</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home-api.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="tv-header">
+        <div class="tv-container">
+            <div class="tv-header-inner">
+
+                <a href="index.html" class="tv-brand">
+                    <div class="tv-logo">TV</div>
+                    <span class="tv-brand-name">TV</span>
+                </a>
+
+                <nav class="tv-nav" aria-label="Điều hướng chính">
+                    <a href="index.html" class="tv-nav-link active">Trang chủ</a>
+                    <a href="movies.html" class="tv-nav-link">Phim</a>
+                    <a href="categories.html" class="tv-nav-link">Thể loại</a>
+                    <a href="profile.html" class="tv-nav-link">Tài khoản</a>
+                </nav>
+
+                <div class="tv-header-actions">
+                    <a href="login.html" class="tv-btn tv-btn-outline">
+                        Đăng nhập
+                    </a>
+
+                    <a href="register.html" class="tv-btn tv-btn-red">
+                        Đăng ký
+                    </a>
+
+                    <div class="tv-account-menu">
+                        <span class="tv-avatar">V</span>
+                        <span>Viễn</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Trạng thái API -->
+        <p
+            id="tv-api-status"
+            class="tv-api-status"
+            role="status"
+            aria-live="polite"
+        >
+            Đang kết nối TMDB...
+        </p>
+
+        <!-- PHIM NỔI BẬT -->
+        <section class="tv-home-hero" id="tv-home-hero">
+            <div class="tv-container">
+                <div class="tv-home-hero-content">
+
+                    <span class="tv-home-label">Phim nổi bật</span>
+
+                    <h1 class="tv-home-title">
+                        <span id="tv-featured-title">
+                            Đang tải phim...
+                        </span>
+                    </h1>
+
+                    <div class="tv-home-meta">
+                        <span class="tv-home-meta-item" id="tv-featured-meta-1"></span>
+                        <span class="tv-home-meta-divider"></span>
+                        <span class="tv-home-meta-item" id="tv-featured-meta-2"></span>
+                        <span class="tv-home-meta-divider"></span>
+                        <span class="tv-home-meta-item" id="tv-featured-meta-3"></span>
+                        <span class="tv-home-meta-divider"></span>
+                        <span class="tv-home-meta-item" id="tv-featured-meta-4"></span>
+                    </div>
+
+                    <p class="tv-home-description" id="tv-featured-description">
+                        Đang tải thông tin phim...
+                    </p>
+
+                    <div class="tv-home-actions">
+                        <a href="watch.html" class="tv-btn tv-btn-red tv-home-watch-btn">
+                            ▶ Xem phim
+                        </a>
+
+                        <a href="movie-detail.html" class="tv-btn tv-btn-outline tv-home-info-btn">
+                            Xem chi tiết
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PHIM MỚI CẬP NHẬT -->
+        <section class="tv-section">
+            <div class="tv-container">
+                <div class="tv-section-header">
+                    <div>
+                        <h2 class="tv-section-title">Phim mới cập nhật</h2>
+                        <p class="tv-section-description">
+                            Những bộ phim mới nhất trên TV
+                        </p>
+                    </div>
+
+                    <a href="movies.html" class="tv-section-link">
+                        Xem tất cả &rarr;
+                    </a>
+                </div>
+
+                <div
+                    class="tv-home-movie-grid"
+                    id="tv-new-movies"
+                    aria-live="polite"
+                ></div>
+            </div>
+        </section>
+
+        <!-- THỂ LOẠI -->
+        <section class="tv-section">
+            <div class="tv-container">
+                <div class="tv-section-header">
+                    <div>
+                        <h2 class="tv-section-title">Khám phá thể loại</h2>
+                        <p class="tv-section-description">
+                            Tìm bộ phim phù hợp với sở thích của bạn
+                        </p>
+                    </div>
+
+                    <a href="categories.html" class="tv-section-link">
+                        Tất cả thể loại &rarr;
+                    </a>
+                </div>
+
+                <div
+                    class="tv-home-category-grid"
+                    id="tv-home-categories"
+                ></div>
+            </div>
+        </section>
+
+        <!-- PHIM PHỔ BIẾN -->
+        <section class="tv-section">
+            <div class="tv-container">
+                <div class="tv-section-header">
+                    <div>
+                        <h2 class="tv-section-title">Phim phổ biến</h2>
+                        <p class="tv-section-description">
+                            Những bộ phim phổ biến trên TMDB
+                        </p>
+                    </div>
+
+                    <a href="movies.html" class="tv-section-link">
+                        Xem tất cả &rarr;
+                    </a>
+                </div>
+
+                <div
+                    class="tv-home-movie-grid"
+                    id="tv-popular-movies"
+                    aria-live="polite"
+                ></div>
+            </div>
+        </section>
+
+        <!-- GIỚI THIỆU -->
+        <section class="tv-section">
+            <div class="tv-container">
+                <div class="tv-home-promo">
+                    <div class="tv-home-promo-content">
+                        <h2 class="tv-home-promo-title">
+                            Khám phá thế giới điện ảnh
+                        </h2>
+
+                        <p class="tv-home-promo-text">
+                            Tìm kiếm và khám phá hàng trăm bộ phim
+                            thuộc nhiều thể loại khác nhau trên TV.
+                        </p>
+
+                        <a href="movies.html" class="tv-btn tv-btn-red">
+                            Khám phá ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="tv-footer">
+        <div class="tv-container">
+            <div class="tv-footer-inner">
+                <div>
+                    <div class="tv-footer-brand">
+                        <div class="tv-logo">TV</div>
+                        <span class="tv-brand-name">TV</span>
+                    </div>
+
+                    <p class="tv-footer-text mt-2 mb-0">
+                        Website xem phim trực tuyến.
+                    </p>
+                </div>
+
+                <p class="tv-footer-copy mb-0">
+                    &copy; 2026 TV. Viễn
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/home.js" defer></script>
+</body>
+</html>

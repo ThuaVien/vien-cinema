@@ -1,0 +1,229 @@
+/* ==============================
+   TV - CATEGORIES CSS
+   Chỉ dành cho categories.html
+   ============================== */
+
+.tv-categories-page {
+    padding: 55px 0 75px;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.tv-categories-header {
+    max-width: 700px;
+    margin-bottom: 38px;
+}
+
+.tv-categories-title {
+    margin-bottom: 10px;
+
+    color: var(--tv-white);
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.tv-categories-description {
+    margin: 0;
+
+    color: var(--tv-muted);
+    font-size: 15px;
+}
+
+/* ==============================
+   CATEGORY GRID
+   ============================== */
+
+.tv-categories-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.tv-category-card {
+    position: relative;
+
+    min-height: 190px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--tv-border);
+    border-radius: var(--tv-radius);
+
+    background: var(--tv-card);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.tv-category-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(230, 57, 70, 0.4);
+
+    background: var(--tv-card-hover);
+}
+
+/* Background decoration */
+
+.tv-category-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -60px;
+    right: -35px;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, 0.12);
+
+    transition: transform 0.3s ease;
+}
+
+.tv-category-card:hover::before {
+    transform: scale(1.2);
+}
+
+.tv-category-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    bottom: -40px;
+    right: 35px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.tv-category-content {
+    position: relative;
+    z-index: 2;
+}
+
+.tv-category-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(230, 57, 70, 0.12);
+    color: var(--tv-red-light);
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.tv-category-title {
+    margin-bottom: 4px;
+
+    color: var(--tv-white);
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.tv-category-count {
+    margin: 0;
+
+    color: var(--tv-muted);
+
+    font-size: 12px;
+}
+
+/* ==============================
+   FEATURED CATEGORY
+   ============================== */
+
+.tv-categories-featured {
+    margin-top: 50px;
+    padding: 30px;
+
+    border-radius: var(--tv-radius);
+
+    border: 1px solid rgba(230, 57, 70, 0.18);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(230, 57, 70, 0.13),
+            rgba(230, 57, 70, 0.02)
+        ),
+        var(--tv-black-soft);
+}
+
+.tv-categories-featured-title {
+    margin-bottom: 7px;
+
+    color: var(--tv-white);
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.tv-categories-featured-text {
+    margin-bottom: 20px;
+
+    color: var(--tv-muted);
+
+    font-size: 14px;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 991.98px) {
+
+    .tv-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .tv-categories-page {
+        padding: 40px 0 55px;
+    }
+
+    .tv-categories-title {
+        font-size: 29px;
+    }
+
+    .tv-categories-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .tv-category-card {
+        min-height: 160px;
+    }
+
+    .tv-categories-featured {
+        padding: 24px 20px;
+    }
+}
